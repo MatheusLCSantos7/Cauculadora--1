@@ -33,56 +33,44 @@
     <input type="button" value="multiplicação" onclick="multiplicar()">
     <div id="res">Resultado</div>
     <script>
-    function somar() 
-    {
-        var tn1 = window.document.getElementById('Num1')
+
+    var tn1 = window.document.getElementById('Num1')
     var tn2 = window.document.getElementById('Num2')
     var res = window.document.getElementById('res')
     var n1 = Number(tn1.value)
     var n2 = Number(tn2.value)
-    var sm = n1 + n2
-    res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${sm}`
-    }
-    
-    var bsm = window.document.getElementById('BSM')
-    function Entrou()
-    {
-    bsm.style.backgroundColor = 'rgb(123, 138, 138)'
-    }
 
-    function Saiu()
-    {
-    bsm.style.backgroundColor = 'rgb(70, 160, 160)' 
-    }
+    function somar() 
+        {
+        var sm = n1 + n2
+        res.innerHTML = sm
+        }
+        
+        var bsm = window.document.getElementById('BSM')
+
+        function Entrou()
+        {
+        bsm.style.backgroundColor = 'rgb(123, 138, 138)'
+        }
+
+        function Saiu()
+        {
+        bsm.style.backgroundColor = 'rgb(70, 160, 160)' 
+        }
     function subtrair()
     {
-        var tn1 = window.document.getElementById('Num1')
-    var tn2 = window.document.getElementById('Num2')
-    var res = window.document.getElementById('res')
-    var n1 = Number(tn1.value)
-    var n2 = Number(tn2.value)
     var sb = n1 - n2
     res.innerHTML = `A Subtração entre ${n1} e ${n2} é igual a ${sb}`
     }
 
     function dividir()
     {
-        var tn1 = window.document.getElementById('Num1')
-    var tn2 = window.document.getElementById('Num2')
-    var res = window.document.getElementById('res')
-    var n1 = Number(tn1.value)
-    var n2 = Number(tn2.value)
     var d = n1 / n2
     res.innerHTML = `A Divisão entre ${n1} e ${n2} é igual a ${d}`
     }
     
     function multiplicar()
     {
-        var tn1 = window.document.getElementById('Num1')
-    var tn2 = window.document.getElementById('Num2')
-    var res = window.document.getElementById('res')
-    var n1 = Number(tn1.value)
-    var n2 = Number(tn2.value)
     var m = n1 * n2
     res.innerHTML = `A Multiplicação entre ${n1} e ${n2} é igual a ${m}`
     }
