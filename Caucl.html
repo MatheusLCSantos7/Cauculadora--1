@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cauculadora1</title>
+    <style>
+      body 
+      {
+    background-color: rgb(70, 160, 160);
+      }
+    h1
+    {
+    color: blue;
+    font: normal 18pt arial;
+    }
+    </style>
+</head>
+<body>
+    <h1>
+        Cauculadora Matheus Santos 1      
+    </h1>
+    <input type="number" name="Num1" id="Num1">
+    <input type="number" name="Num2" id="Num2">
+
+    <div id="BSM" onmouseenter="Entrou()" onmouseout="Saiu()">
+        <input type="button" value="soma" onclick="somar()">
+    </div>
+
+    <input type="button" value="subtração" onclick="subtrair()">
+    <input type="button" value="divisao" onclick="dividir()">
+    <input type="button" value="multiplicação" onclick="multiplicar()">
+    <div id="res">Resultado</div>
+    <script>
+    function somar() 
+    {
+        var tn1 = window.document.getElementById('Num1')
+    var tn2 = window.document.getElementById('Num2')
+    var res = window.document.getElementById('res')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var sm = n1 + n2
+    res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${sm}`
+    }
+    
+    var bsm = window.document.getElementById('BSM')
+    function Entrou()
+    {
+    bsm.style.backgroundColor = 'rgb(123, 138, 138)'
+    }
+
+    function Saiu()
+    {
+    bsm.style.backgroundColor = 'rgb(70, 160, 160)' 
+    }
+    function subtrair()
+    {
+        var tn1 = window.document.getElementById('Num1')
+    var tn2 = window.document.getElementById('Num2')
+    var res = window.document.getElementById('res')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var sb = n1 - n2
+    res.innerHTML = `A Subtração entre ${n1} e ${n2} é igual a ${sb}`
+    }
+
+    function dividir()
+    {
+        var tn1 = window.document.getElementById('Num1')
+    var tn2 = window.document.getElementById('Num2')
+    var res = window.document.getElementById('res')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var d = n1 / n2
+    res.innerHTML = `A Divisão entre ${n1} e ${n2} é igual a ${d}`
+    }
+    
+    function multiplicar()
+    {
+        var tn1 = window.document.getElementById('Num1')
+    var tn2 = window.document.getElementById('Num2')
+    var res = window.document.getElementById('res')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var m = n1 * n2
+    res.innerHTML = `A Multiplicação entre ${n1} e ${n2} é igual a ${m}`
+    }
+    var nome = window.prompt('Hola qual é seu nome ?')
+    window.alert('Bem vindo  ' + nome)  
+    </script>
+
+</body>
+</html>
